@@ -1,0 +1,37 @@
+.developer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  height: 90vh;
+  flex-direction: column;
+  gap: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+.developers {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+span {
+  font-size: 15px;
+}

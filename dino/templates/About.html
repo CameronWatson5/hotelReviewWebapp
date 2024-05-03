@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/about.css' %}">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="developer-section">
+  <img style="width: 10%;" src="{% static 'images/dino_logo.png' %}" alt="Logo">
+  <p style="color: green; font-size: 40px;" class="developers">Developed with love by</p>
+  <p class="developers">Min Ma &nbsp; <span>2868392M@student.gla.ac.uk
+    </span></p>
+  <p class="developers">Aditya Madhira &nbsp; <span>adityamadhira07@gmail.com</span></p>
+  <p class="developers">Made Darma &nbsp; <span>darma.paramarta@gmail.com</span></p>
+  <p class="developers">Cameron Watson &nbsp; <span>2392496w@student.gla.ac.uk and
+    </span></p>
+  <p class="developers">Harsh Suvarna &nbsp; <span>"harsh.suvarna0@gmail.com"
+    </span></p>
+
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'scripts/about.js' %}"></script>
+{% endblock extra_js %}

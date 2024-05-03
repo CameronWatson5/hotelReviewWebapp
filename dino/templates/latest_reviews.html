@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'styles/latest_reviews.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="reviews-section">
+  {% if reviews %}
+  {% for review in reviews %}
+  <div class="review" onclick="location.href='{% url 'hotel-info' review.hotelID %}'">
+    <div class="name-date">
+      <h2 style="text-transform: capitalize;">{{ review.hotel_name }}</h2>
+      <p class="date-tag">{{ review.review_date }}</p>
+    </div>
+    <div class="rating-title">
+      <p class="rating">{{ review.rating }}/5</p>
+      <p style="font-size: 30px;">"{{ review.review_title }}"</p>
+    </div>
+    <p class="review-text">{{ review.review_content }}</p>
+  </div>
+  {% endfor %}
+  {% else %}
+  <div class="no-reviews">
+    <p>{{ message }}</p>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'scripts/latest_reviews.js' %}"></script>
+{% endblock %}
